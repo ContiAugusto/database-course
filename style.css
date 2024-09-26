@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-layer{
+    background-color:#b68ff5;
+    height: 66px;    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: Josefin Sans;
+    color: Black;
+    letter-spacing: 8px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+li:hover{
+    background-color:#dcd6f5;
+    opacity: 0.4;
+}
+#github{
+    background-color: white;
+    border-radius: 15px;
+}
+
+.navbar-container ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #dcd6f5;
+    height: 50px;
+    border-radius: 7px;
+    border-top: 2px solid white;
+    font-family: Montserrat;
+    position: fixed;
+    width: 100%;
+    margin-top: 66px;
+    z-index: 5;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+a:active{
+    color:  #dcd6f5;
+}
