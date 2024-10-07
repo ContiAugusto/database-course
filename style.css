@@ -71,7 +71,7 @@ a:active{
     opacity: 1;
 }
 .main-layer{
-    background-color: #162b4e;
+    background:linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
     align-items: center ;
     display: flex;
     height: 500px;
