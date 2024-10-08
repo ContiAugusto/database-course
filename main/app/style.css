@@ -102,3 +102,42 @@ a:active{
   height: 250px;
     width: 250px;
 }
+.footer-layer2{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background:linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
+height: 400px;  
+font-size: 10px;
+
+
+
+}
+#fot1,#fot2,#fot3{
+    height: 300px;
+    width: 20.3%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding-top: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    box-shadow: -4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    color: white;
+  
+}
+
+.footer-layer1 h1{
+    color: rgb(46, 236, 217);
+    font-family: Montserrat;
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    background:linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
+}
+#foot-text,#foot-text1,#foot-text2{
+    font-size: 17px;
+}
