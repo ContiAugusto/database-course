@@ -113,19 +113,22 @@ font-size: 10px;
 
 
 }
-#fot1,#fot2,#fot3{
+.foot1{
     height: 300px;
     width: 20.3%;
     background-color: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
    padding-top: 30px;
     border-radius: 20px;
     margin-bottom: 20px;
-    font-size: 10px;
+    font-size: 11px;
     box-shadow: -4px 4px 4px 2px rgba(0, 0, 0, 0.2);
     color: white;
+    padding-left: 10px;
+    align-items: center;
+    
+
   
 }
 
@@ -139,5 +142,14 @@ font-size: 10px;
     background:linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
 }
 #foot-text,#foot-text1,#foot-text2{
-    font-size: 17px;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.foot1{
+    transition: .4s;
+    position: relative;
+}
+.foot1:hover{
+    transform: scale(1.1);
 }
