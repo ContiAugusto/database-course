@@ -174,3 +174,40 @@ a:active{
     padding: 5px 0; 
     text-align: center;
 }
+.module {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    color: black;
+    padding-top: 5%;
+    padding-left: 20px;
+    gap: 20px; 
+  }
+  
+  .module section {
+    flex-basis: calc(33.33% - 10px); 
+    padding: 10px;
+    background-color: #f2f2f2; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    height: 100px;
+    
+  }
+ 
+
+.module-layer{
+   height: 500px;
+   width: 100%;
+    padding: 20px;
+    
+}
+#mod-title{
+    font-size: 30px;
+    font-family: Montserrat;
+    color: var(--background-dark);
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
