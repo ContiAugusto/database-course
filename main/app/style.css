@@ -10,6 +10,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --primary-color: rgb(46, 236, 217);
+    --background-dark: rgba(8, 18, 36, 1);
+    --background-light: rgba(8, 18, 36, 0.8);
+    --font-color: white;
+}
 body{
     
     font-family: Montserrat;
@@ -65,24 +71,24 @@ body{
     padding-left: 20%;
     
 }
-a:link{
+.link:link{
     text-decoration: none;
     color: white;
     font-size: 17px;
     font-family: Montserrat;
     list-style: none;
 }
-a:hover{
+.link:hover{
    opacity: 0.4;
 }
-a:visited{
+.link:visited{
     text-decoration: none;
     color: white;
     font-size: 17px;
     font-family: Montserrat;
     list-style: none;
 }
-a:active{
+.link:active{
     text-decoration: none;
     color: rgb(46, 236, 217);
     font-size: 17px;
@@ -121,12 +127,6 @@ a:active{
 #image-layer{
   height: 250px;
     width: 250px;
-}
-:root {
-    --primary-color: rgb(46, 236, 217);
-    --background-dark: rgba(8, 18, 36, 1);
-    --background-light: rgba(8, 18, 36, 0.8);
-    --font-color: white;
 }
 
 .footer-layer1, .footer-layer2 {
@@ -193,21 +193,56 @@ a:active{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     text-align: center; 
     height: 100px;
-    
+    transition: transform 0.2s, box-shadow 0.2s; 
   }
- 
+  
 
-.module-layer{
-   height: 500px;
-   width: 100%;
+  .module section:hover {
+    transform: scale(1.0); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .module-layer {
+    height: 500px;
+    width: 100%;
     padding: 20px;
-    
-}
-#mod-title{
+  }
+  
+  #mod-title {
     font-size: 30px;
     font-family: Montserrat;
     color: var(--background-dark);
     padding-left: 10%;
     padding-top: 5%;
+  }
+  
+  .module-content {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: transform 0.4s; /* Corrigido o tempo de transição */
+  }
+  
+  .module-content p {
+    font-size: 15px;
+    font-family: Montserrat;
+    color: var(--background-dark);
+  }
+  
+  #image1 {
+    height: 60px;
+    width: 60px;
+  }
+  .link2:link{
+    text-decoration: none;
+    list-style: none;
+  }
+.link2:visited{
+    text-decoration: none;
+    list-style: none;
 }
-
+.link2:active{
+    text-decoration: none;
+    list-style: none;
+}
+  
