@@ -203,7 +203,7 @@ body{
   }
   
   .module-layer {
-    height: 500px;
+    height: 630px;
     width: 100%;
     padding: 20px;
   }
@@ -244,5 +244,9 @@ body{
 .link2:active{
     text-decoration: none;
     list-style: none;
+}
+.button-layer{
+    height: 500px;
+    background-color: var(--background-dark);
 }
   
