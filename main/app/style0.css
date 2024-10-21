@@ -128,7 +128,7 @@ body{
 }
 .about-layer{
     background-color: white;
-    height: 500px;
+    height: 1300px;
 }
 #mod-title {
     font-size: 30px;
@@ -137,4 +137,41 @@ body{
     padding-left: 10%;
     padding-top: 5%;
   }
+  .person{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+  .odd{
+    padding-left: 10%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+  }
+  .odd p{
+    font-family: Montserrat;
+    font-size: 17px;
+    color: var(--background-dark);
+    width: 50%;
+    padding-left: 2%;
+  }
+  .even{
+    padding-left: 10%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .even p{
+    font-family: Montserrat;
+    font-size: 17px;
+    color: var(--background-dark);
+    width: 50%;
+    padding-left: 2%;
+  }
+  .button-layer{
+    height: 500px;
+    background-color: var(--background-dark);
+}
+  
   
