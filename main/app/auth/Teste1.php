@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,6 +153,7 @@ font-size: 10px;
 //Tabela_1 ---------------------------------------------------------------------------------------
 
     /*
+        DEPOIS ME FALA COMO ISSO VAI FUNCIONAR, PORQUE EU NÃO SEI COMO VAI FUNCIONAR
         $sql1_1 = "CREATE table if not exists Tabela_1(ID_nome int not null primary key auto_increment);";
         $SQL1_2 = "ALTER table Tabela_1 add column nome varchar(50) not null;";
         $SQL1_3 = "ALTER table Tabela_1 add column CPF char(11) not null;";
