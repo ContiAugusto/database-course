@@ -1,31 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.main{
-    background:linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
+.main {
+    background: linear-gradient(90deg, rgba(8, 18, 36, 1) 0%, rgb(16, 38, 80) 50%, rgb(26, 57, 116) 100%);
     align-content: flex-end;
     display: flexbox;
-    height: 500px; 
+    height: 500px;
     padding-bottom: 2%;
 }
-.main h1{
-    font-family:   lato;
+
+.main h1 {
+    font-family: lato;
     font-size: 38px;
     color: rgb(46, 236, 217);
     padding-left: 5%;
-    padding-bottom: 2%;
-    float: none;
-    
 }
-.main p{
+
+.main p {
     font-family: Montserrat;
     font-size: 17px;
     color: white;
     width: 60%;
     padding-left: 2%;
     float: left;
+    padding-top: 2%;
 }
-.video{
+
+.video {
     float: right;
     padding-right: 5%;
+}
+
+.mod-content {
+    padding-top: 3%;
+    padding-left: 2%;
+    height: 100%;
+    width: 100%;
+}
+.mod-content p{
+    width: 55%;    
+    font-size: 20px;
+    float: left;
 }
