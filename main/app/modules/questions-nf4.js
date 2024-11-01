@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
        
         const answers = {
-            q1: 'A', // Resposta correta para a pergunta 1
-            q2: 'A', // Resposta correta para a pergunta 2
-            q3: 'B'  // Resposta correta para a pergunta 3
+            q1: 'A', 
+            q2: 'A', 
+            q3: 'B'  
         };
 
 

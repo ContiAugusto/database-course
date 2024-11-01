@@ -408,7 +408,7 @@ else {
 
 if (isset($row["Nome1"]) && isset($row["Nome2"]) && isset($row["Telefone1"]) && isset($row["Telefone2"]) && isset($row["Telefone3"])) {
     if ($row["Nome1"] == "Enzo Schiavo" && $row["Nome2"] == null && $row["CPF"] == "12345678910" && $row["Telefone"] == "5511123456789" && $row["ID_Trabalho"] == "1" && $row["Trabalho"] == "Físico" && $row["Telefone2"] == "5511987654321" && $row["Telefone3"] == "0") {
-        if () {
+        if (1) {
         $res4_2 = mysqli_query($conexao, $SQL4_2);
             
             $row = mysqli_fetch_assoc($res4_2);
