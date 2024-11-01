@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>PtechLab</title>
   <link rel="stylesheet" href="/main/app/style.css" />
-  <link rel="stylesheet" href="style-modules.css" />
+  <link rel="stylesheet" href="style-modules4.css" />
   <script src="/main/app/script.js" defer></script>
 </head>
 
@@ -35,11 +35,13 @@
          mas sem relação direta com outros atributos presentes. 
          Esse tipo de dependência é mais comum em bancos de dados complexos, 
          onde uma entidade pode ter múltiplos valores para um único atributo 
-         sem influenciar outros valores.
+         sem influenciar outros valores.<br><br>
+         Para que uma tabela esteja na 4ª Forma Normal:
+
+  Ela deve atender aos requisitos da 3ª Forma Normal (NF3), ou seja, não ter dependências transitivas.
+  Deve eliminar dependências multivaloradas, garantindo que cada atributo dependa exclusivamente da chave primária.
       </p>
-      <!-- Neste exemplo, maf_year e color são independentes um do outro, mas dependem 
-       de car_model. Neste exemplo, 
-       essas duas colunas são consideradas multivalores dependentes de car_model.-->
+    
     </div>
     <div class="video">
       <iframe src="/main/app/modules/testedevideo.mp4" height="262px" width="465px">
@@ -47,13 +49,44 @@
     </div>
   </div>
   <div class="mod-content">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus sed harum fuga voluptates vel ipsa,
-      quae deleniti, dolore nemo maxime voluptatem aliquam odit itaque expedita numquam repellendus quam eaque?
-      Laboriosam magni totam perferendis debitis hic dolore qui aperiam esse fuga ducimus, sequi magnam nemo et.
-      Asperiores in aspernatur a provident, perferendis soluta inventore at debitis, temporibus libero quisquam
-      voluptatem.
-      Temporibus neque eligendi quasi aliquid libero similique quaerat harum voluptate repellendus quod quisquam
+    
+      <h2>Exemplo de Dependência Multivalorada</h2>
+
+<p><strong>IMAGINE</strong> uma tabela de "Carros" 
+        com os seguintes atributos: 
+        Modelo, Ano, Cor.
+        Se um modelo de carro pode ser de vários anos e ter várias cores, 
+        há uma dependência multivalorada entre o ano e cor. 
+        para resolver isso na NF4, devemos separar essas dependências 
+        em tabelas distintas, como Ano_Carro e Cor_Carro, 
+        onde cada uma é lida com as múltiplas relações.</p>
+<img src="\main\content\modelagem-de-dados-dependencia-multivalorada.jpg">
+
+  <!-- Neste exemplo, maf_year e color são independentes um do outro, mas dependem 
+       de car_model. Neste exemplo, 
+       essas duas colunas são consideradas multivalores dependentes de car_model.-->
+
+<h2>Passos para implementar a NF4</h2>
+  <ul class="text-ul">
+    <li><strong>dependências</strong>  multivaloradas em tabelas que atendem à NF3.</li>
+  
+    <li><strong>Separar as dependências</strong>  em tabelas independentes, onde cada valor multivalorado 
+    pode ser representado individualmente.</li> 
+
+    <li> <strong>Associar a cada nova tabela</strong>  com a chave primária da tabela original, 
+    permitindo que cada dependência seja representada sem afetar outros atributos.</li> 
+</ul>
+  <p>Essa forma normal é menos comum em muitos sistemas, mas é essencial em bases de dados onde a 
+  integridade e a precisão dos dados em múltiplas relações são cruciais.</p>
+      
+  
+  
+  
+  
+  
+  
+  
+  <p>Temporibus neque eligendi quasi aliquid libero similique quaerat harum voluptate repellendus quod quisquam
       unde qui, quas odit, perspiciatis necessitatibus vel voluptatem! Dolorem animi libero necessitatibus beatae sequi
       nemo modi asperiores?
       Pariatur eos quae magnam accusamus! Doloremque recusandae nulla corrupti. Nemo, reiciendis velit beatae qui
@@ -89,7 +122,7 @@
       aperiam.
       Eum atque vero odit hic reiciendis doloribus vel distinctio error, asperiores quis nihil corrupti, numquam
       tempora.
-    </p>
+  </p>
   </div>
 </body>
 
