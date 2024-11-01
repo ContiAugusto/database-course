@@ -271,3 +271,85 @@ body {
     height: 500px;
     background-color: var(--background-dark);
 }
+/* CSS existente permanece aqui */
+
+@media (max-width: 1200px) {
+    .navbar-layer h1 {
+        font-size: 24px;
+    }
+    .navbar-layer ul {
+        padding-left: 10%;
+    }
+    .main-layer h1 {
+        font-size: 30px;
+    }
+    .main-layer p {
+        font-size: 15px;
+        width: 90%; 
+    }
+    .img-layer {
+        padding-right: 5%;
+    }
+    #image-layer {
+        height: 200px;
+        width: 200px;
+    }
+    .foot1 {
+        width: 45%; 
+        
+    }
+  #foot-text{
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 900px) {
+    .navbar-layer {
+        flex-direction: column; 
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .navbar-layer ul {
+        flex-direction: column; 
+        padding-left: 0;
+    }
+    .main-layer {
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-layer2 {
+        flex-direction: column; 
+        font-size: 18px;
+    }
+    .foot1 {
+        width: 80%; 
+        margin: 10px auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-layer h1 {
+        font-size: 20px;
+    }
+    .module {
+        flex-direction: column; 
+        padding-left: 0;
+    }
+    .module section {
+        flex-basis: 100%; 
+        height: auto; 
+    }
+    #mod-title {
+        font-size: 24px; 
+        padding-left: 5%;
+    }
+    .button-layer {
+        height: auto; 
+    }
+    .main-layer{
+       padding-top: 100px;
+    }
+    #foot-text{
+        font-size: 17px;
+      }
+}
