@@ -273,10 +273,6 @@ body {
     list-style: none;
 }
 
-.button-layer {
-    height: 500px;
-    background-color: var(--background-dark);
-}
 
 /* CSS existente permanece aqui */
 
@@ -376,4 +372,58 @@ body {
     #foot-text {
         font-size: 17px;
     }
+}
+.button-layer {
+    height: 400px;
+    background-color: var(--background-dark);
+}
+
+#image2{
+    height: 40px;
+    width: 40px;
+}
+.button-layer{
+    display: flex;
+}
+.button-content{
+    padding-top: 5%;
+    height: 400px;
+    width: 20%;
+    margin-left: 20%;
+}
+.button-content h1{
+    font-size: 30px;
+    font-family: Roboto slab;
+    gap : 5px; 
+    color: white;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+.button-content p{
+    font-size: 17px;
+    font-family: Montserrat;
+    color: white;
+    padding-left: 15%;
+    padding-top: 10%;
+    padding-right: 10%;
+}
+.button-content2{
+    font-size: 17px;
+    font-family: Montserrat;
+    color: white;
+  padding-top: 11.05%;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+}
+.button-content2 p{
+    font-size: 17px;
+    font-family: Montserrat;
+
+    color: white;
+    padding-left: 10%;
+    padding-right: 2%;
+    padding-top: 5%;
+    padding-bottom: 7%; 
 }
