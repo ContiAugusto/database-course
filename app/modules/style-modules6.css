@@ -45,3 +45,70 @@
     font-size: 20px;
     float: left;
 }
+.mod-content h2{
+    font-size: 30px;
+    padding-top: 5%;
+}
+.mod-content h3{
+    font-size: 26px;
+    padding-top: 5%;
+}
+.text-ul{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 20px;
+    padding-top: 2%;
+}
+img{
+    padding-top: 2%;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.questionnaire {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    max-width: 600px;
+    color: black;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.question label {
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+
+.question{
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: rgb(46, 236, 217);
+    color: rgb(8, 18, 36);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+button:hover {
+    background-color: rgb(8, 18, 36);
+    color: rgb(46, 236, 217);
+}
