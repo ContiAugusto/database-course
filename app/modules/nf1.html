@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>PtechLab</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="style-modules3.css" />
+  <link rel="stylesheet" href="style-modules1.css" />
   <script src="../script.js" defer></script>
 </head>
 
@@ -36,7 +36,7 @@
    cada valor de uma tabela deve ser indivisível ou não multivalorado, para 
    que não ocorram conflitos tanto no algoritmo do sistema que armazena os 
    dados quanto os próprios valores que se demonstram incorretos. Desse modo
-   , mesmo que indiretamente, o primeiro NF melhora o desempenho de um banco
+   , mesmo que indiretamente, a primeira NF melhora o desempenho de um banco
     de dados por captar informações simplificadas e menores, diminuindo a
      carga que constringe o servidor; além disso, é necessário esforço e 
      engenhosidade para concordar com a primeira forma, como nem sempre se
@@ -44,18 +44,46 @@
       </p>
     </div>
     <div class="video">
-      <iframe src="../modules/testedevideo.mp4" height="262px" width="465px">
+      <iframe src="../modules/Video_Modulo1.mp4" height="262px" width="465px">
       </iframe>
     </div>
   </div>
   <div class="mod-content">
+
+    <h2>Exemplo de uma chave composta</h2><br>
     <p>
-      
+      Concretize em sua mente uma tabela com 6 (seis)
+      atributos os quais são: o identificador do cliente
+      (ID_Cliente), nome do cliente (Nome_Cli), o CEP,
+      o CPF, o Telefone e a Senha por cadastro imputado
+      na tabela de cliente. 
 
-
+    <br><br><br>
+<center>
+      <iframe src="../modules/Imagem1-Modulo_1.jpg" height="243px" width="675px">
+      </iframe></center>
+      <h6>Tabela 1 - ID_Cli, Nome_Cli, CEP, CPF, Telefone e Senha</h6>
+</p>
+      <br><br>
+<p>
+      Ao olhar a tabela, é fácil noticiar que os cadastros um, dois e três tem valores duplos,
+      principalmente na aba do telefone. Para então pertencer à forma normal, devemos separar
+      os valores extras e imputar os nomes extras <strong>Enzzus Scarvius</strong> e <strong>Augustus Máximus</strong>, CEP extra
+      <strong>2321-121</strong>, CPF extra <strong>123.321.123-32</strong> e telefones extras <strong>22 (22) 22222-2222</strong>, <strong>55 (24) 66666-6666</strong>
+      e <strong>01 (03) 99999-9999</strong> em outras abas da tabela como sublinhado na tabela abaixo:
 
 
     </p>
+
+    <br><br>
+
+    <center>
+      <iframe src="../modules/Gif1_Modulo1.gif"  width="635px" height="275px">
+      </iframe></center>
+      <h6>Tabela transitiva - Remoção de atributos multivalorados</h6>
+      <p>
+        Que, em seguida, serão passados para a Tabela_2, com as novas colunas “<strong>Nome_Adicional_Cli</strong>”, “<strong>CEP_Extra</strong>”, “<strong>CPF_Extra</strong>” e “<strong>Tel_Extra</strong>” :
+      </p>
   </div>
 </body>
 
