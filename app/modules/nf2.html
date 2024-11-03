@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <title>PtechLab</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="style-modules3.css" />
-  <script src="../script.js" defer></script>
+  <link rel="stylesheet" href="style-modules2.css" />
+  <script src="questions-nf2.js" defer></script>
 </head>
 
 <body>
@@ -26,69 +26,110 @@
   </div>
   <div class="main">
     <div class="text-layer">
-      <h1>Normalização de Tabela: NF3</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
+      <h1>Normalização de Tabela: 2NF</h1>
+      <p style="font-size: 20px; margin-top: 2%;">
+        A 2ª Forma Normal (2NF) é um passo importante no processo de normalização de dados em bancos de dados relacionais. Ela visa eliminar redundâncias e dependências parciais em uma tabela, o que melhora a integridade e a eficiência dos dados.
       </p>
     </div>
     <div class="video">
-      <iframe src="../modules/testedevideo.mp4" height="262px" width="465px">
+      <iframe src="../modules/video2nf.mp4" height="262px" width="465px">
       </iframe>
     </div>
   </div>
   <div class="mod-content">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus sed harum fuga voluptates vel ipsa,
-      quae deleniti, dolore nemo maxime voluptatem aliquam odit itaque expedita numquam repellendus quam eaque?
-      Laboriosam magni totam perferendis debitis hic dolore qui aperiam esse fuga ducimus, sequi magnam nemo et.
-      Asperiores in aspernatur a provident, perferendis soluta inventore at debitis, temporibus libero quisquam
-      voluptatem.
-      Temporibus neque eligendi quasi aliquid libero similique quaerat harum voluptate repellendus quod quisquam
-      unde qui, quas odit, perspiciatis necessitatibus vel voluptatem! Dolorem animi libero necessitatibus beatae sequi
-      nemo modi asperiores?
-      Pariatur eos quae magnam accusamus! Doloremque recusandae nulla corrupti. Nemo, reiciendis velit beatae qui
-      ad fugit quisquam itaque cumque aliquam assumenda fuga nihil exercitationem. Debitis amet architecto unde quasi
-      alias!
-      Non laudantium maxime fugit suscipit quas, qui ipsa quaerat adipisci itaque, aperiam optio molestiae quasi
-      reiciendis deserunt possimus iste dolor amet. Vel doloremque inventore perspiciatis expedita unde repellendus nam
-      consectetur?
-      Quasi, nulla modi hic fuga quaerat impedit tempora deserunt laborum. Repellendus amet nobis beatae aliquam a,
-      omnis, facere optio deleniti ex itaque ut temporibus culpa consectetur architecto expedita illum corporis.
-      Dolore illum possimus impedit molestias obcaecati cupiditate, reiciendis nisi eaque beatae quas aliquam animi
-      optio blanditiis assumenda voluptatum accusamus nostrum, nobis adipisci ipsa. Quia, dicta veniam. Nihil quasi quis
-      numquam.
-      Dolore corporis vitae suscipit harum odit error placeat minima id accusantium labore facilis maxime architecto
-      at nihil, voluptates, dicta eveniet. Vero similique, tenetur sint dolorem temporibus accusantium voluptas commodi
-      facilis.
-      Itaque vitae cumque, laborum obcaecati suscipit error unde ut eveniet et consectetur nemo minima explicabo neque
-      a ratione reprehenderit ab recusandae, saepe iure. Facere numquam ipsa assumenda quo maxime illo!
-      Saepe quibusdam veritatis facere cumque perspiciatis, reprehenderit placeat obcaecati blanditiis unde consectetur
-      sequi deleniti numquam illo id ipsa ad quas sunt! Debitis provident vel a itaque repellendus obcaecati vero
-      consectetur!
-      Veritatis pariatur repellat quas, dolore ex unde sed totam! Eius eos voluptate tenetur, dolorum architecto,
-      consectetur veniam impedit deleniti aspernatur ducimus molestiae voluptatum aut animi beatae praesentium. Dolore,
-      nemo. Natus?
-      Ipsam, voluptate error, maxime aliquam perspiciatis animi laudantium consequatur vero, dolorum minima fugiat quasi
-      ex quam itaque omnis quo dolores placeat maiores temporibus? Veniam eum enim illum facere praesentium. Maiores!
-      Cupiditate rem ad nobis deleniti labore corrupti alias iure quidem animi, iste consequatur praesentium ab tempore
-      illo nihil esse saepe quis vero ipsa. Omnis assumenda ad corrupti iure iste reiciendis!
-      Vitae numquam nam aspernatur laudantium dolor quos quibusdam eveniet necessitatibus quo provident, soluta quam
-      cupiditate accusantium officia vel corrupti error. Voluptates, molestiae sapiente. Vel iste eveniet voluptates
-      iusto veniam ad.
-      Nobis neque optio voluptates perferendis enim velit vel, provident quas exercitationem, temporibus veritatis
-      aperiam.
-      Eum atque vero odit hic reiciendis doloribus vel distinctio error, asperiores quis nihil corrupti, numquam
-      tempora.
-    </p>
+
+    <h2>Definição e Regras da 2ª Forma Normal</h2>
+    <p>Uma tabela está na 2ª Forma Normal (2NF) se:</p>
+    <ul class="text-ul">
+      <li>Ela já está na <strong>1ª Forma Normal (1NF)</strong>, ou seja, todos os dados estão atomizados (sem colunas com múltiplos valores) e cada registro é identificado por uma chave primária.</li>
+      <li>Todos os atributos não chave (colunas que não fazem parte da chave primária) dependem totalmente da chave primária, ou seja, não existem dependências parciais.</li>
+      <li>Se a tabela tiver uma chave primária composta, todos os atributos não chave devem depender de todos os elementos da chave composta. Caso contrário, a tabela não está na 2NF e precisa ser reorganizada.</li>
+    </ul>
+
+    <h2>Exemplo Prático: Tabela de Pedidos (não normalizada)</h2>
+    <p>Imagine uma tabela de "Pedidos" que armazena informações sobre pedidos de clientes, produtos e quantidades, como mostrado abaixo. Nesta tabela, cada registro contém dados sobre um pedido específico e os detalhes do cliente e produto.</p>
+    <img src="nf2-nãonormalizada.png" alt="Exemplo de tabela não normalizada">
+
+    <h3>Problema de Dependência Parcial</h3>
+    <p>Nesta tabela:</p>
+    <ul class="text-ul">
+      <li><strong>NomeCliente</strong> depende de <strong>ClienteID</strong>, e <strong>Produto</strong> e <strong>Preço Produto</strong> dependem de <strong>ProdutoID</strong>. Esses atributos não dependem completamente da chave composta (PedidoID e ProdutoID), o que caracteriza uma dependência parcial.</li>
+    </ul>
+
+    <h2>Aplicando a 2NF</h2>
+    <p>Para reorganizar a tabela e resolver as dependências parciais, dividimos a tabela em várias tabelas menores, cada uma armazenando informações distintas e essenciais. Isso resulta nas seguintes tabelas:</p>
+    <p><strong>1. Tabela: Pedidos</strong></p>
+    <p>Armazena os IDs dos pedidos e associa cada pedido ao cliente responsável, sem detalhes do cliente ou do produto.</p>
+    <img src="nf2-image1.png" alt="Tabela Pedidos">
+
+    <p><strong>2. Tabela: Clientes</strong></p>
+    <p>Centraliza as informações dos clientes, eliminando duplicações de nomes.</p>
+    <img src="nf2-image2.png" alt="Tabela Clientes">
+
+    <p><strong>3. Tabela: Produtos</strong></p>
+    <p>Define os produtos e seus preços, evitando redundâncias ao centralizar esses dados.</p>
+    <img src="nf2-image3.png" alt="Tabela Produtos">
+
+    <p><strong>4. Tabela: ItensPedido</strong></p>
+    <p>Associa os pedidos aos produtos, indicando a quantidade específica de cada item em um pedido.</p>
+    <img src="nf2-image4.png" alt="Tabela ItensPedido">
+
+    <h2>Explicação da Aplicação da 2NF</h2>
+    <ul class="text-ul">
+      <li><strong>Pedidos:</strong> Relaciona os IDs dos pedidos com os clientes, sem carregar informações duplicadas sobre os clientes.</li>
+      <li><strong>Clientes:</strong> Centraliza as informações sobre clientes, evitando repetições.</li>
+      <li><strong>Produtos:</strong> Armazena informações dos produtos e preços, facilitando atualizações e eliminando redundâncias.</li>
+      <li><strong>ItensPedido:</strong> Registra a relação entre pedidos e produtos, detalhando a quantidade de cada item em um pedido.</li>
+    </ul>
+
+    <h2>Benefícios da 2ª Forma Normal</h2>
+    <ul class="text-ul">
+      <li><strong>Elimina Redundâncias:</strong> Dados como NomeCliente e Preço Produto são armazenados uma única vez, reduzindo o risco de inconsistências.</li>
+      <li><strong>Facilidade de Atualização:</strong> Alterações nos dados são feitas em um único lugar, como atualizar o preço de um produto apenas na tabela Produtos.</li>
+      <li><strong>Economia de Espaço:</strong> Ao evitar dados duplicados, o armazenamento é mais eficiente.</li>
+      <li><strong>Melhor Integração de Dados:</strong> Organizar as informações em tabelas específicas facilita a integração e consulta entre os dados.</li>
+    </ul>
+    
+    <h2>Perguntas sobre NF2</h2><br>
+    <div class="questionnaire">
+      <form id="nf2-questions">
+        <div class="question">
+          <label>1. A 2ª forma normal (NF2) elimina qual tipo de dependência?</label><br>
+          <input type="radio" id="q1a1" name="q1" value="A" required>
+          <label for="q1a1">A) Dependências parciais</label><br>
+          <input type="radio" id="q1a2" name="q1" value="B">
+          <label for="q1a2">B) Dependências multivaloradas</label><br>
+          <input type="radio" id="q1a3" name="q1" value="C">
+          <label for="q1a3">C) Dependências transitivas</label>
+        </div>
+
+        <div class="question">
+          <label>2. Para estar na 2ª forma normal (NF2), a tabela deve estar na:</label><br>
+          <input type="radio" id="q2a1" name="q2" value="A" required>
+          <label for="q2a1">A) 1ª forma normal (NF1)</label><br>
+          <input type="radio" id="q2a2" name="q2" value="B">
+          <label for="q2a2">B) 3ª forma normal (NF3)</label><br>
+          <input type="radio" id="q2a3" name="q2" value="C">
+          <label for="q2a3">C) Forma normal de Boyce-Codd (BCNF)</label>
+        </div>
+
+        <div class="question">
+          <label>3. Qual é um benefício de aplicar a 2ª forma normal (NF2)?</label><br>
+          <input type="radio" id="q3a1" name="q3" value="A" required>
+          <label for="q3a1">A) Aumento da redundância de dados</label><br>
+          <input type="radio" id="q3a2" name="q3" value="B">
+          <label for="q3a2">B) Redução de inconsistências</label><br>
+          <input type="radio" id="q3a3" name="q3" value="C">
+          <label for="q3a3">C) Maior quantidade de dados armazenados</label>
+        </div>
+
+        <button type="submit">Enviar Respostas</button>
+      </form>
+      <p id="result"></p>
+    </div>
   </div>
+
+  <script src="questions-nf2.js" defer></script>
 </body>
 
 </html>
