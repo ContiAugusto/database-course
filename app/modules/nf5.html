@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <title>PtechLab</title>
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="style-modules3.css" />
+  <link rel="stylesheet" href="style-modules5.css" />
   <script src="../script.js" defer></script>
 </head>
 
@@ -26,17 +26,15 @@
   </div>
   <div class="main">
     <div class="text-layer">
-      <h1>Normalização de Tabela: NF3</h1>
+      <h1>Normalização de Tabela: NF5</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
+        A dependencia de junção é quando ocorre uma multivalorada, mas não existem todas as combinações e ai é preciso
+        uma terceira tabela para dizer quais linhas
+        existem e quais não existem.
+        <br><br><br><br>
+        "Uma relação R está na 5FN, também chamada de forma normalizada de projeção-junção (PJ/NF) se, e somente se,
+        toda dependêcia de junção em R for consequencia
+        de chaves candidatas de R"
       </p>
     </div>
     <div class="video">
@@ -45,49 +43,85 @@
     </div>
   </div>
   <div class="mod-content">
+    <h2>Dependências Multivaloradas:</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus sed harum fuga voluptates vel ipsa,
-      quae deleniti, dolore nemo maxime voluptatem aliquam odit itaque expedita numquam repellendus quam eaque?
-      Laboriosam magni totam perferendis debitis hic dolore qui aperiam esse fuga ducimus, sequi magnam nemo et.
-      Asperiores in aspernatur a provident, perferendis soluta inventore at debitis, temporibus libero quisquam
-      voluptatem.
-      Temporibus neque eligendi quasi aliquid libero similique quaerat harum voluptate repellendus quod quisquam
-      unde qui, quas odit, perspiciatis necessitatibus vel voluptatem! Dolorem animi libero necessitatibus beatae sequi
-      nemo modi asperiores?
-      Pariatur eos quae magnam accusamus! Doloremque recusandae nulla corrupti. Nemo, reiciendis velit beatae qui
-      ad fugit quisquam itaque cumque aliquam assumenda fuga nihil exercitationem. Debitis amet architecto unde quasi
-      alias!
-      Non laudantium maxime fugit suscipit quas, qui ipsa quaerat adipisci itaque, aperiam optio molestiae quasi
-      reiciendis deserunt possimus iste dolor amet. Vel doloremque inventore perspiciatis expedita unde repellendus nam
-      consectetur?
-      Quasi, nulla modi hic fuga quaerat impedit tempora deserunt laborum. Repellendus amet nobis beatae aliquam a,
-      omnis, facere optio deleniti ex itaque ut temporibus culpa consectetur architecto expedita illum corporis.
-      Dolore illum possimus impedit molestias obcaecati cupiditate, reiciendis nisi eaque beatae quas aliquam animi
-      optio blanditiis assumenda voluptatum accusamus nostrum, nobis adipisci ipsa. Quia, dicta veniam. Nihil quasi quis
-      numquam.
-      Dolore corporis vitae suscipit harum odit error placeat minima id accusantium labore facilis maxime architecto
-      at nihil, voluptates, dicta eveniet. Vero similique, tenetur sint dolorem temporibus accusantium voluptas commodi
-      facilis.
-      Itaque vitae cumque, laborum obcaecati suscipit error unde ut eveniet et consectetur nemo minima explicabo neque
-      a ratione reprehenderit ab recusandae, saepe iure. Facere numquam ipsa assumenda quo maxime illo!
-      Saepe quibusdam veritatis facere cumque perspiciatis, reprehenderit placeat obcaecati blanditiis unde consectetur
-      sequi deleniti numquam illo id ipsa ad quas sunt! Debitis provident vel a itaque repellendus obcaecati vero
-      consectetur!
-      Veritatis pariatur repellat quas, dolore ex unde sed totam! Eius eos voluptate tenetur, dolorum architecto,
-      consectetur veniam impedit deleniti aspernatur ducimus molestiae voluptatum aut animi beatae praesentium. Dolore,
-      nemo. Natus?
-      Ipsam, voluptate error, maxime aliquam perspiciatis animi laudantium consequatur vero, dolorum minima fugiat quasi
-      ex quam itaque omnis quo dolores placeat maiores temporibus? Veniam eum enim illum facere praesentium. Maiores!
-      Cupiditate rem ad nobis deleniti labore corrupti alias iure quidem animi, iste consequatur praesentium ab tempore
-      illo nihil esse saepe quis vero ipsa. Omnis assumenda ad corrupti iure iste reiciendis!
-      Vitae numquam nam aspernatur laudantium dolor quos quibusdam eveniet necessitatibus quo provident, soluta quam
-      cupiditate accusantium officia vel corrupti error. Voluptates, molestiae sapiente. Vel iste eveniet voluptates
-      iusto veniam ad.
-      Nobis neque optio voluptates perferendis enim velit vel, provident quas exercitationem, temporibus veritatis
-      aperiam.
-      Eum atque vero odit hic reiciendis doloribus vel distinctio error, asperiores quis nihil corrupti, numquam
-      tempora.
+      <strong>IMAGINE</strong> a tabela, <strong>Revendas</strong>, com os atributos <strong>Representante</strong>;
+      <strong>Cliente</strong>;
+      e <strong>Produto</strong>, que está fora da NF4, ou seja, contem dependências multivaloradas
     </p>
+    <img src="Revendas.png">
+    <p>Para estar na NF4, ela não pode conter dependências multivaloradas, como explicado no módulo anterior. Ficando
+      Assim:</p>
+    <img src="Clientes_Representantes.png">
+    <img src="Representação.png">
+    <h3>Implementação do NF5</h3>
+    <p>Mas para estar no NF5, <strong>imagine</strong> que partes dessas dependências multivaloradas estejam
+      incompletas, formando assim uma
+      <strong>Dependência de Junção</strong>
+    </p>
+    <img src="Revendas_DMI.png">
+    <p>Assim impossibilitando que apenas as tabelas <strong>Clientes_Representante</strong> e
+      <strong>Representação</strong> não consigam mais representar a tabela
+      <strong>Revendas</strong>, para resolver isso precisaremos de uma nova tabela, chamada
+      <strong>Vendas_Clientes</strong>
+    </p>
+    <img src="Vendas_Clientes.png">
+    <p>E com ela, junta das outras, nós conseguimos representar o primeiro Registro.</p>
+    <h2>Benefícios do 5NF</h2>
+    <ul class="text-ul">
+      <li><strong>Eliminaçãode Redundâncias:</strong> o NF5 ajuda a eliminar redundâncias complexas de dados, garantindo
+        que cada fato seja armazenado apenas uma vez.
+        Isso minimiza o desperdício de espaço de armazenamento.</li>
+      <li><strong>Integridade dos Dados:</strong> Ao segmentar informações em tabelas mais apropriadas e relacionadas, a
+        NF5 ajuda a manter a integridade referencial,
+        evitando inconsistências nos dados.</li>
+      <li><strong> Flexibilidade:</strong> A NF5 permite que a estrutura de dados se adapte melhor a mudanças nos
+        requisitos do negócio, pois as relações entre os dados
+        são claramente definidas e mais geerenciáveis.</li>
+    </ul><br><br>
+    <p>Em conclusão, a aplicação da <strong>NF5</strong> contribui para a criação de um modelo de dados mais robusto e eficiente, promovendo a
+       consistência e a escalabilidade do banco de dados. No entanto, sua implementação deve ser cuidadosamente avaliada em função
+        das necessidades específicas do sistema, uma vez que a complexidade adicional pode não ser necessária em todos os casos. 
+        Portanto, a NF5 é uma ferramenta valiosa na busca pela excelência na modelagem de dados, mas deve ser utilizada de maneira 
+        equilibrada e pragmática.
+    </p>
+    <h2>Perguntas sobre NF5</h2><br>
+    <div class="questionnaire">
+      <form id="nf5-questions">
+        <div class="question">
+          <label>1. O que a 5ª forma normal (NF5) elimina?</label><br>
+          <input type="radio" id="q1a1" name="q1" value="A" required>
+          <label for="q1a1">A) a Dependência de Junção</label><br>
+          <input type="radio" id="q1a2" name="q1" value="B">
+          <label for="q1a2">B) Dependências transitivas</label><br>
+          <input type="radio" id="q1a3" name="q1" value="C">
+          <label for="q1a3">C) Chaves primárias compostas</label>
+        </div>
+
+        <div class="question">
+          <label>2. Para estar na 5ª forma normal (NF5), a tabela deve estar na:</label><br>
+          <input type="radio" id="q2a1" name="q2" value="A" required>
+          <label for="q2a1">A) 4ª forma normal (NF4)</label><br>
+          <input type="radio" id="q2a2" name="q2" value="B">
+          <label for="q2a2">B) Ter pelo menos duas chaves primárias</label><br>
+          <input type="radio" id="q2a3" name="q2" value="C">
+          <label for="q2a3">C) Estar na 2ª forma normal (NF2)</label>
+        </div>
+
+        <div class="question">
+          <label>3. Qual é o principal benefício de aplicar a 5ª forma normal (NF5)?</label><br>
+          <input type="radio" id="q3a1" name="q3" value="A" required>
+          <label for="q3a1">A) Aumento da redundância de dados</label><br>
+          <input type="radio" id="q3a2" name="q3" value="B">
+          <label for="q3a2">B) Aumento da Flexibilidade</label><br>
+          <input type="radio" id="q3a3" name="q3" value="C">
+          <label for="q3a3">C) Eliminação de chaves primárias</label>
+        </div>
+
+        <button type="submit">Enviar Respostas</button>
+      </form>
+      <p id="result2"></p>
+    </div>
   </div>
 </body>
 
