@@ -1,29 +1,41 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('nf5-questions');
     const resultDisplay = document.getElementById('result2');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o recarregamento da página
+    if (form && resultDisplay) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
 
-      
-        let score = 0;
+            let score = 0;
 
-       
-        const answers = {
-            q1: 'A', 
-            q2: 'A', 
-            q3: 'B'  
-        };
+            // Respostas corretas
+            const answers = {
+                q1: 'A',
+                q2: 'B',
+                q3: 'B'
+            };
 
-
-        for (let question in answers) {
-            const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
-            if (selectedAnswer && selectedAnswer.value === answers[question]) {
-                score++;
+            // Verifica cada questão
+            for (let question in answers) {
+                const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === answers[question]) {
+                    score++;
+                }
             }
-        }
 
-       
-        resultDisplay.textContent = `Você acertou ${score} de ${Object.keys(answers).length} perguntas.`;
-    });
+            // Atualiza o texto do resultado
+            resultDisplay.textContent = `Você acertou ${score} de ${Object.keys(answers).length} perguntas.`;
+        });
+    } else {
+        console.error('Formulário ou elemento de resultado não encontrado.');
+    }
 });
+window.onscroll = function() {
+    const navbar = document.querySelector('.navbar-layer');
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.style.backgroundColor = "rgba(8, 18, 36, 0.8)";
+    } else {
+        navbar.style.backgroundColor = "rgba(8, 18, 36, 1)"; 
+    }
+};
