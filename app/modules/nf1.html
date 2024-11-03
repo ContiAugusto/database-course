@@ -59,12 +59,18 @@
       na tabela de cliente. 
 
     <br><br><br>
-<center>
+  
+   </p>
+
+      <center>
+
       <iframe src="../modules/Imagem1-Modulo_1.jpg" height="243px" width="675px">
       </iframe></center>
-      <h6>Tabela 1 - ID_Cli, Nome_Cli, CEP, CPF, Telefone e Senha</h6>
-</p>
+
+      <h6>Tabela 1 - ID_Cli, Nome_Cli, CEP, CPF, Telefone e Senha (JPG).</h6>
+
       <br><br>
+
 <p>
       Ao olhar a tabela, é fácil noticiar que os cadastros um, dois e três tem valores duplos,
       principalmente na aba do telefone. Para então pertencer à forma normal, devemos separar
@@ -78,12 +84,163 @@
     <br><br>
 
     <center>
+      
       <iframe src="../modules/Gif1_Modulo1.gif"  width="635px" height="275px">
       </iframe></center>
-      <h6>Tabela transitiva - Remoção de atributos multivalorados</h6>
+      
+      <h6>Tabela transitiva - Remoção de atributos multivalorados (GIF).</h6>
+      
+      <br><br>
+
+      <h2>Próximos passos para implementar a NF1</h2>
+      
+      <br><br>
+      
       <p>
-        Que, em seguida, serão passados para a Tabela_2, com as novas colunas “<strong>Nome_Adicional_Cli</strong>”, “<strong>CEP_Extra</strong>”, “<strong>CPF_Extra</strong>” e “<strong>Tel_Extra</strong>” :
+      <ul class="text-ul">
+        <strong> Repassar  </strong> <li> Os dados à seguinte tabela (ou à mesma tabela anterior);</li><br>
+        <strong> Adicionar </strong> <li> As novas colunas (ou quaisquer outros nomes dados a elas) “Nome_Adicional_Cli”, “CEP_Extra”, “CPF_Extra” e “Tel_Extra”;</li><br>
+        <strong> Remover   </strong> <li> Os valores necessários da Tabela 1 para que a própria faça alusão à primeira NF.</li><br>
+      </ul>
       </p>
+
+      <br><br>
+
+      <p>
+        A partir desses passos, é possível visualizar a tabela 2:
+      </p>
+
+      <br><br>
+
+      <center>
+        
+        <iframe src="../modules/Imagem2-Modulo_1.jpg.png" height="243px" width="634px">
+        </iframe></center>
+        
+        <h6>Tabela 2 - ID_Cli, Nome_Adicional_Cli, CEP_Extra, CPF_Extra e Tel_Extra (PNG).</h6>
+        
+        <br><br><br>
+
+        <p>
+
+          Portanto, para que o banco de dados de cadastro de clientes seja concordante com a NF1 veja o GIF abaixo:
+
+        </p>
+
+        <center>
+          
+          <br><br>
+        
+          <iframe src="../modules/Gif2_Modulo1.gif" height="550px" width="1300px">
+          </iframe></center>
+          
+          <h6>Transição - GIF.</h6>
+          
+          <br><br><br><br><br>
+
+          <h2>Requisitos para estar em primeira forma normal (NF1)</h2>
+
+          <br><br>
+
+          <p>
+
+             <ul class="text-ul">
+            
+              <strong>Atomicidade</strong> 
+
+                                                <li> Não conter as tabelas de um
+                                                banco de dados com valores 
+                                                multivalorados sem exluir 
+                                                os próprios valores 
+                                                imputados nos atributos
+                                                das tabelas. </li><br><br>
+
+              <strong>Vale Ressaltar...</strong>
+              <li>Que se o banco de dados estiver na forma normal Boyce-Codd, ele
+                estará automaticamente na primeira forma normal. Portanto, caso o
+                banco precise de concordar com a BCNF, não será necessário se 
+                perocupar com esta.</li>
+
+             </ul>
+
+          </p>
+
+          <br><Br><br><br>
+
+            <p>
+
+              <h2>Benefícios, Características, Malefícios da NF1</h2>
+              
+              <br><br>
+              
+              <ul class="text-ul">
+
+                <strong>Benefícios</strong>
+                  
+                <li>Eliminação de redundâncias;</li>
+
+                <li>Melhora na organização de bancos de dados.</li><br><br>
+
+                <strong>Características</strong>
+
+                <li>Chaves e identificadores únicos;</li>
+
+                <li>Segurança valores únicos por atributo de um cadastro.</li><br><br>
+
+                <strong>Malefícios</strong>
+
+                <li>Diminuição no desempenho do sistema;</li>
+
+                <li>Limitação do sistema e de variações banco de dados.</li>
+
+              </ul>
+
+
+            </p>
+
+            <br><br><br><br>
+
+            <h2>Perguntas sobre NF1</h2><br>
+            <div class="questionnaire">
+              <form id="nf1-questions">
+                <div class="question">
+                  <label>1. O que a primeira forma normal corrige?</label><br>
+                  <input type="radio" id="q1a1" name="q1" value="A" required>
+                  <label for="q1a1">A) Tabelas multivaloradas</label><br>
+                  <input type="radio" id="q1a2" name="q1" value="B">
+                  <label for="q1a2">B) Dependências compostas</label><br>
+                  <input type="radio" id="q1a3" name="q1" value="C">
+                  <label for="q1a3">C) Chaves primárias repetidas</label>
+                </div>
+        
+                <div class="question">
+                  <label>2. Tendo uma tabela (atributos: ID_Prof, Aula) com o valores -  1 | Matemática Física, Qual a correção correta dos valores para o banco de dados sem alterar a tabela original:</label><br>
+                  <input type="radio" id="q2a1" name="q2" value="A" required>
+                  <label for="q2a1">A) Waffle | Mel</label><br>
+                  <input type="radio" id="q2a2" name="q2" value="B">
+                  <label for="q2a2">B) 3 | Matemática | Física</label><br>
+                  <input type="radio" id="q2a3" name="q2" value="C">
+                  <label for="q2a3">C) 1 | Matemática</label>
+                </div>
+        
+                <div class="question">
+                  <label>3. Qual é o principal benefício de aplicar a forma normal primária (NF1)?</label><br>
+                  <input type="radio" id="q3a1" name="q3" value="A" required>
+                  <label for="q3a1">A) Remover tabelas desncessárias</label><br>
+                  <input type="radio" id="q3a2" name="q3" value="B">
+                  <label for="q3a2">B) Impor a atomicidade.</label><br>
+                  <input type="radio" id="q3a3" name="q3" value="C">
+                  <label for="q3a3">C) Melhora na estrutura do BD</label>
+                </div>
+        
+                <button type="submit">Enviar Respostas</button>
+              </form>
+              <p id="result"></p>
+            </div>
+          </div>
+        
+          <script src="questions-nf1.js" defer></script>
+          </div>
   </div>
 </body>
 
