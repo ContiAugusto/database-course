@@ -24,7 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Atualiza o texto do resultado
-            resultDisplay.textContent = `Você acertou ${score} de ${Object.keys(answers).length} perguntas.`;
+            if (score == 3) {
+                resultDisplay.textContent = `Parabéns, você acertou todas as perguntas!!`;
+            }
+            else
+            {
+                resultDisplay.textContent = `Você acertou ${score} de ${Object.keys(answers).length} perguntas.`;
+            }
         });
     } else {
         console.error('Formulário ou elemento de resultado não encontrado.');
