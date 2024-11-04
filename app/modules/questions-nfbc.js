@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('nfbd-questions');
+    const form = document.getElementById('nfbc-questions');
     const resultDisplay = document.getElementById('result');
 
     if (form && resultDisplay) {
@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Respostas corretas
             const answers = {
                 q1: 'A',
-                q2: 'C',
-                q3: 'C'
+                q2: 'A',
+                q3: 'B'
             };
 
             // Verifica cada questão
