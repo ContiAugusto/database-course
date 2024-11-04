@@ -6,7 +6,7 @@
   <title>PtechLab</title>
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="style-modules3.css" />
-  <script src="../script.js" defer></script>
+  <script src="questions-nf3.js" defer></script>
 </head>
 
 <body>
@@ -28,15 +28,13 @@
     <div class="text-layer">
       <h1>Normalização de Tabela: NF3</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus nisi tempore
-        laudantium sed aspernatur optio dolorum, soluta magnam sunt veniam ipsa hic iste at facilis perferendis nulla
-        beatae impedit?
+       A NF3 (terceira forma normal) é a ultima das três principais formas normais (NF1, NF2 e NF3), ao aplicar as três primeiras formas normais
+      o banco de dados ja pode ser considerado normalizado (as demais formas existem para refinar ainda mais os bancos mais complexos).
+      O foco principal da NF3 é eliminar dependências transitivas. Dependência transitiva em uma tabela é uma dependência funcional entre dois ou mais atributos não-chave.<br><br>
+
+       Para que seja aplicado a terceira forma normal (NF3) em uma tabela será necessário que: A tabela ja atenda aos critérios da segunda forma normal, não possuindo dependências parciais.
+
+       
       </p>
     </div>
     <div class="video">
@@ -45,49 +43,104 @@
     </div>
   </div>
   <div class="mod-content">
+
+    <h2>Como aplicar a terceira forma normal em uma tabela</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus sed harum fuga voluptates vel ipsa,
-      quae deleniti, dolore nemo maxime voluptatem aliquam odit itaque expedita numquam repellendus quam eaque?
-      Laboriosam magni totam perferendis debitis hic dolore qui aperiam esse fuga ducimus, sequi magnam nemo et.
-      Asperiores in aspernatur a provident, perferendis soluta inventore at debitis, temporibus libero quisquam
-      voluptatem.
-      Temporibus neque eligendi quasi aliquid libero similique quaerat harum voluptate repellendus quod quisquam
-      unde qui, quas odit, perspiciatis necessitatibus vel voluptatem! Dolorem animi libero necessitatibus beatae sequi
-      nemo modi asperiores?
-      Pariatur eos quae magnam accusamus! Doloremque recusandae nulla corrupti. Nemo, reiciendis velit beatae qui
-      ad fugit quisquam itaque cumque aliquam assumenda fuga nihil exercitationem. Debitis amet architecto unde quasi
-      alias!
-      Non laudantium maxime fugit suscipit quas, qui ipsa quaerat adipisci itaque, aperiam optio molestiae quasi
-      reiciendis deserunt possimus iste dolor amet. Vel doloremque inventore perspiciatis expedita unde repellendus nam
-      consectetur?
-      Quasi, nulla modi hic fuga quaerat impedit tempora deserunt laborum. Repellendus amet nobis beatae aliquam a,
-      omnis, facere optio deleniti ex itaque ut temporibus culpa consectetur architecto expedita illum corporis.
-      Dolore illum possimus impedit molestias obcaecati cupiditate, reiciendis nisi eaque beatae quas aliquam animi
-      optio blanditiis assumenda voluptatum accusamus nostrum, nobis adipisci ipsa. Quia, dicta veniam. Nihil quasi quis
-      numquam.
-      Dolore corporis vitae suscipit harum odit error placeat minima id accusantium labore facilis maxime architecto
-      at nihil, voluptates, dicta eveniet. Vero similique, tenetur sint dolorem temporibus accusantium voluptas commodi
-      facilis.
-      Itaque vitae cumque, laborum obcaecati suscipit error unde ut eveniet et consectetur nemo minima explicabo neque
-      a ratione reprehenderit ab recusandae, saepe iure. Facere numquam ipsa assumenda quo maxime illo!
-      Saepe quibusdam veritatis facere cumque perspiciatis, reprehenderit placeat obcaecati blanditiis unde consectetur
-      sequi deleniti numquam illo id ipsa ad quas sunt! Debitis provident vel a itaque repellendus obcaecati vero
-      consectetur!
-      Veritatis pariatur repellat quas, dolore ex unde sed totam! Eius eos voluptate tenetur, dolorum architecto,
-      consectetur veniam impedit deleniti aspernatur ducimus molestiae voluptatum aut animi beatae praesentium. Dolore,
-      nemo. Natus?
-      Ipsam, voluptate error, maxime aliquam perspiciatis animi laudantium consequatur vero, dolorum minima fugiat quasi
-      ex quam itaque omnis quo dolores placeat maiores temporibus? Veniam eum enim illum facere praesentium. Maiores!
-      Cupiditate rem ad nobis deleniti labore corrupti alias iure quidem animi, iste consequatur praesentium ab tempore
-      illo nihil esse saepe quis vero ipsa. Omnis assumenda ad corrupti iure iste reiciendis!
-      Vitae numquam nam aspernatur laudantium dolor quos quibusdam eveniet necessitatibus quo provident, soluta quam
-      cupiditate accusantium officia vel corrupti error. Voluptates, molestiae sapiente. Vel iste eveniet voluptates
-      iusto veniam ad.
-      Nobis neque optio voluptates perferendis enim velit vel, provident quas exercitationem, temporibus veritatis
-      aperiam.
-      Eum atque vero odit hic reiciendis doloribus vel distinctio error, asperiores quis nihil corrupti, numquam
-      tempora.
+      Para cada atributo (ou grupo) não-chave que for um determinante na relação será necessário criar uma nova tabela.
+      Esse mesmo atributo será a Primary Key (PK ou chave primária) dessa nova relação.
+      Então será necessário mover todos os atributos que são dependentes funcionalmente do atributo retirado para a nova tabela
+      Por fim vale ressaltar que o atributo retirado (PK da nova tabela) permanece na tabela original, e servirá como uma chave estrangeira para associar as duas tabelas.
+      
     </p>
+
+    <h2>Exemplo de uma tabela que não está na NF3</h2>
+
+    <img src="TabelaVendaMod3.png" height="400px" width="800px">
+
+    <ul class="text-ul">
+      <li><strong>Nota_fiscal: </strong> neste exemplo é a Primary Key (PK)</li>
+
+      <li><strong>Codigo_Vendedor e Nome_Vendedor:</strong> são atributos não-chave que remetem a um vendedor.</li>
+
+      <li> <strong>Cod_Produto e Qtde_Vendida:</strong> também são atributos não-chave, mas que remetem a Nota_fiscal.</li>
+    </ul>
+
+    <p>
+      Como é perceptível existem uma Dependência transitiva nessa tabela, isso ocorre porque os atributos Codigo_Vendedor e Nome_Vendedor
+       não estão ligados unico e exclusivamente a chave primária (Nota_fiscal).
+    </p>
+
+    <h2>Aplicando a terceira forma normal no exemplo</h2>
+    
+    <img src="TabelaVendaNMod3.png" width="1130px" height="400px">
+
+    <ul class="text-ul">
+      <li>Os dois atributos não-chave que possuiam alguma dependência funcional, foram realocados em uma nova tabela chamada tbl_Vendedor.</li>
+
+      <li>O atributo principal da dependência transitiva (Codigo_Vendedor) permaneceu na tabela tbl_Venda mas agora como uma Foreign Key (FK).</li>
+
+      <li>Na tabela tbl_Vendedor o atributo principal se tornou a Primary Key da tabela.</li>
+    </ul>
+
+
+    <h2>Observação importante para encontrar uma dependência transitiva</h2>
+
+    <img src="qtde_vendidaMod3.png">
+
+
+    <p>Neste exemplo mesmo o Cod_Produto sendo igual na primeira e quarta linha, a quantidade vendida não é a mesma, indicando que um não depende diretamente do outro.</p>
+
+    <img class="img3" src="VendedorMod3.png">
+
+    <p>Por outro lado nessa dependência transitiva os dois atributos sempre são idênticos em cada linha.</p>
+
+    <h2>Questões</h2>
+
+    <div class="questionnaire">
+      <form id="nf3-questions">
+        <div class="question">
+          <label>1. Qual o objetivo principal da NF3?</label><br>
+          <input type="radio" id="q1a1" name="q1" value="A" required>
+          <label for="q1a1">A) Deixar todos os atributos em um estado atômico</label><br>
+          <input type="radio" id="q1a2" name="q1" value="B">
+          <label for="q1a2">B) Obter a normalização necessária para a NF5</label><br>
+          <input type="radio" id="q1a3" name="q1" value="C">
+          <label for="q1a3">C) Eliminar dependências transitivas</label>
+        </div>
+
+        <div class="question">
+          <label>2. Para ser aplicado a NF3 é necessário:</label><br>
+          <input type="radio" id="q2a1" name="q2" value="A" required>
+          <label for="q2a1">A) A tabela apenas não obter dados multivalorados</label><br>
+          <input type="radio" id="q2a2" name="q2" value="B">
+          <label for="q2a2">B) A tabela estar na 2ª forma normal (NF2)</label><br>
+          <input type="radio" id="q2a3" name="q2" value="C">
+          <label for="q2a3">C) A tabela possuir o campo joão</label>
+        </div>
+
+        <div class="question">
+          <label>3. Para eliminar uma dependência transitiva você deve:</label><br>
+          <input type="radio" id="q3a1" name="q3" value="A" required>
+          <label for="q3a1">A) Criar uma nova tabela com os atributos que possuem a dependência funcional </label><br>
+          <input type="radio" id="q3a2" name="q3" value="B">
+          <label for="q3a2">B) Recriar a tabela igualmente pois se trata de um bug</label><br>
+          <input type="radio" id="q3a3" name="q3" value="C">
+          <label for="q3a3">C) Criar 3 chaves primárias na mesma tabela</label>
+        </div>
+
+
+
+    <button type="submit">Enviar Respostas</button>
+  </form>
+  <p id="result"></p>
+</div>
+      
+    <h2>Conclusão</h2>
+
+    
+
+    <p>Agora você possui o conhecimento necessário para normalizar uma tabela simples, mas será necessário mais <strong>ATENÇÃO</strong> para os seguintes módulos </p>
+    <script src="questions-nf4.js" defer></script>
   </div>
 </body>
 
