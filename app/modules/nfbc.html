@@ -30,16 +30,16 @@
       <h1>Normalização de Tabela: BCNF</h1>
       <p>
         A BCNF constitui o fato de se evitar chaves compostas, ou seja,
-        chaves as quais ignoram as 3 (três) formas normais primárias, 
-        como acarreta em tabelas com valores usualmente multivalorados
-        (NF1), relações de falso relacionamento e dependência para com
+        chaves as quais ignoram 2 (duas) formas normais (NF2 e NF3), 
+        como acarreta em tabelas com relações de falso relacionamento
+        e dependência para com
         a chave primária (NF2) e dependências que não de chaves (NF3).
         A chave deve, portanto, ser independente e onipotente, sem
         interferência de outras chaves, sejam elas realmente chaves ou
         não; e abrigadas pela atomicidade dos valores atingidos pela
         BCNF. Isso deriva em uma diminuição de dependências entre
         valores. Ou seja, caso você concorde com esta forma normal,
-        você também estará concordando comas três primeiras
+        você também estará concordando com as duas
         automaticamente.
       </p>
     </div>
@@ -127,7 +127,8 @@
   
           <p>
   
-            Por conseguinte, geram-se duas tabelas (com a Tabela 1, contendo o "ID_Prof" e o "Nome_Professor"; e a tabela 2, contendo o "ID_Prof" e a "Matéria"):
+            Por conseguinte, geram-se duas tabelas (com a Tabela 1, contendo o "ID_Prof" 
+            e o "Nome_Professor"; e a tabela 2, contendo o "ID_Prof" e a "Matéria"):
   
           </p>
   
@@ -156,7 +157,31 @@
                 atributos que nunca mudem conforme a chave
                 também não.</li>
                 
-                <strong></strong>
+                <strong>Exemplo</strong>
+
+                <p>
+                  Uma Tabela que contenha um ou mais atributos que sejam unicamente correspondentes a uma chave:
+                 <br>
+                 <br> - <strong>Tabela Exemplo</strong>
+                 <br>
+                 <br> ID_Ex | Atributo1 | Atributo2 | Atributo 3 
+                 <br> ______ __________ ___________ ___________
+                 <br> 1 ------  | Valor1_1 - | Valor1_2 - | Valor1_3  
+                 <br> 1 ------  | Valor1_1 - | Valor1_2 - | Valor1_3  
+                 <br> 2 -----   | Valor2_1 - | Valor2_2 - | Valor2_3  
+
+                </p>
+
+                <li>
+
+                  Como se pode ver, os atributos 1 e 2 somente seguem o "ID_Ex",
+                  criando uma chave de mais de um atributo. Dessa forma o
+                  "atributo3" depende de três atributos precedentes ("<strong>ID_Ex</strong>",
+                  "<strong>Atributo1</strong>" e "<strong>Atributo2</strong>") e, por isso, deve-se alterar esta
+                  tabela para que ela concorde com a forma normal Boyce-Codd.
+
+                </li>
+
                 <br><br><br><br>
 
             </ul>
@@ -169,18 +194,18 @@
   
                <ul class="text-ul">
               
-                <strong>A</strong> 
+                <strong>Chaves Unitárias</strong> 
   
-                                                  <li>  </li><br><br>
-  
-                <strong>V</strong>
-                <li></li>
+                    <li>Chaves que a priori não utilizem múltiplos atributos correspondentes
+                        à chave primária (ou estrangeira) de forma explícita.
+
+                    </li><br><br>
   
                </ul>
   
             </p>
   
-            <br><Br><br><br>
+            <br><Br>
   
               <p>
   
@@ -192,21 +217,22 @@
   
                   <strong>Benefícios</strong>
                     
-                  <li></li>
+                  <li>Diminui confusões durante a leitura de um banco de dados;</li>
   
-                  <li></li><br><br>
+                  <li>Já corrige a tabela para que ela concorde com a NF2 e a NF3, além
+                      de permeabilizar a entrada da NF1, NF4 e NF5.</li><br><br>
   
                   <strong>Características</strong>
   
-                  <li></li>
+                  <li>Remove dependências entre atributos.</li>
   
-                  <li></li><br><br>
+                  <br><br>
   
                   <strong>Malefícios</strong>
   
-                  <li></li>
+                  <li>Pode reduzir drasticamente o desempenho do banco de dados;</li>
   
-                  <li></li>
+                  <li>Aumenta a complexidade do sistema abordado.</li>
   
                 </ul>
   
@@ -229,21 +255,21 @@
                   </div>
           
                   <div class="question">
-                    <label>2. Tendo uma tabela (atributos: ID_Prof, Aula) com o valores -  1 | Matemática Física, Qual a correção correta dos valores para o banco de dados sem alterar a tabela original:</label><br>
+                    <label>2. Na "Tabela Exemplo" acima, qual é a alteração correta?</label><br>
                     <input type="radio" id="q2a1" name="q2" value="A" required>
-                    <label for="q2a1">A) Waffle | Mel</label><br>
+                    <label for="q2a1">A) Criar outra tabela com o identificador "ID_Ex" e conectá-lo ao "atributo1", e mais outras duas para os outros dois e remover a inicial. </label><br>
                     <input type="radio" id="q2a2" name="q2" value="B">
-                    <label for="q2a2">B) 3 | Matemática | Física</label><br>
+                    <label for="q2a2">B) Remover os valeres da tabela.</label><br>
                     <input type="radio" id="q2a3" name="q2" value="C">
-                    <label for="q2a3">C) 1 | Matemática</label>
+                    <label for="q2a3">C) Eliminar os atributos 1 e 2, por serem desnecessários. Além disso, remover o valor do meio (1 - Valor1-1_1 - Valor1_2 - Valor1_3), por discordar da primeira, segunda e quinta forma normal.</label>
                   </div>
           
                   <div class="question">
-                    <label>3. Qual é o principal benefício de aplicar a forma normal primária (NF1)?</label><br>
+                    <label>3. Qual é o principal malefício de aplicar a forma normal de Boyde-Cobb (NBCF)?</label><br>
                     <input type="radio" id="q3a1" name="q3" value="A" required>
-                    <label for="q3a1">A) Remover tabelas desncessárias</label><br>
+                    <label for="q3a1">A) Corrigir dependências entre atributos</label><br>
                     <input type="radio" id="q3a2" name="q3" value="B">
-                    <label for="q3a2">B) Impor a atomicidade.</label><br>
+                    <label for="q3a2">B) Reduzir a facilidade de compreesão do banco de dados.</label><br>
                     <input type="radio" id="q3a3" name="q3" value="C">
                     <label for="q3a3">C) Melhora na estrutura do BD</label>
                   </div>
