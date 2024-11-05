@@ -15,23 +15,23 @@
     --background-light: rgba(8, 18, 36, 0.8);
     --font-color: white;
 }
-body{
-    
+body {
+
     font-family: Montserrat;
     color: black;
 }
 
 ::-webkit-scrollbar {
-    width: 12px; 
+    width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(8, 112, 112, 0.7); 
-    border-radius: 10px; 
+    background-color: rgba(10, 194, 194, 0.993);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(8, 18, 36, 0.5); 
+    background: rgb(8, 18, 36);
 }
 
 .navbar-layer{
@@ -170,7 +170,7 @@ body{
     padding-left: 2%;
   }
 .button-layer {
-    height: 400px;
+    height: 500px;
     background-color: var(--background-dark);
 }
 #image2{
