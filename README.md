@@ -28,4 +28,4 @@ Clone o repositório para sua máquina local e abra o arquivo `index.html` no na
 
 ```bash
 git clone https://github.com/ContiAugusto/database/course.git
-cd /database-course
+cd /database-courses
